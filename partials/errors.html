@@ -1,0 +1,36 @@
+<form ng-submit="ErrorsFactory.addError()">
+  <div class="form-group">
+    <label for="title">What's your problem?</label>
+    <input type="text" id="title" ng-model="ErrorsFactory.errorTitle" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Who are you?</label>
+    <input type="text" id="name" ng-model="ErrorsFactory.errorName" required>
+  </div>
+  <div class="form-group">
+    <label for="message">What's your actual problem?</label>
+    <input type="text" id="message" ng-model="ErrorsFactory.errorMessage" placeholder="Copy & paste your error message.">
+  </div>
+  <div class="form-group">
+    <label for="details">Care to elaborate?</label>
+    <input type="text" id="details" ng-model="ErrorsFactory.errorDetails">
+  </div>
+  <div class="form-group">
+    <label for="language">Watch your language!</label>
+    <input type="text" id="language" ng-model="ErrorsFactory.errorLanguage" placeholder="eg. Ruby v2.1.2" required>
+  </div>
+  <div class="form-group">
+    <label for="browser">What's your browser?</label>
+    <select id="browser" ng-init="ErrorsFactory.errorBrowser='Chrome'" ng-model="ErrorsFactory.errorBrowser">
+      <option>Chrome</option>
+      <option>Safari</option>
+      <option>FireFox</option>
+      <option>IE, really?</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Post</button>
+</form>
+
+<ul>
+  <li ng-repeat="item in errors">{{item.title}} , {{item.browser}}</li>
+</ul>
