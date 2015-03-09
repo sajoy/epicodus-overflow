@@ -14,4 +14,10 @@ epicodusOverflow.config(function($stateProvider) {
     controller: "ErrorCtrl"
   });
 
+  $stateProvider.state('error.replies', {
+    url:"/replies",
+    templateUrl: "partials/error.replies.html",
+    controller: "RepliesCtrl"
+  });
+
 });

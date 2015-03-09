@@ -4,17 +4,34 @@ Using: Angular.js, Firebase
 
 https://www.firebase.com/pricing.html
 
-Notes:
+
+
+Features needed:
+- Firebase implementation
 - landing page / default sort = current date
+- nav bar
+- archive
 - sorting: day, language
 - search: error, keywords
-- upvote & ditto similar enough to be in UtilitiesFactory
 - goal = full CRUD functionality (but delete not open to public),
   hopefully Firebase will provide easy way to do this
-- possibly add angular animations
+- awesome style
+
+Possible features:
+- angular animations
+-
 
 
-objects:
+Completed features:
+- upvote & ditto similar enough to be in UtilitiesFactory (oneUp)
+
+
+
+
+
+
+
+Objects:
 - error {
     title: title, (max length)
     error: message, (copy pasted error message)
