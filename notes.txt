@@ -9,6 +9,9 @@ Notes:
 - sorting: day, language
 - search: error, keywords
 - upvote & ditto similar enough to be in UtilitiesFactory
+- goal = full CRUD functionality (but delete not open to public),
+  hopefully Firebase will provide easy way to do this
+- possibly add angular animations
 
 
 objects:

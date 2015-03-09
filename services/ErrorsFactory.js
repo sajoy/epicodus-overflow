@@ -3,13 +3,14 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
   factory.errors = [];
   factory.addError = function() {
     factory.errors.push({
+      id: factory.errors.length + 1,
       title: factory.errorTitle,
       name: factory.errorName,
       message: factory.errorMessage,
       details: factory.errorDetails,
       language: factory.errorLanguage,
       browser: factory.errorBrowser,
-      // time: Time.now(), // how to get timestamp with ang?
+      time: (new Date()).toString(),
       ditto: 0,
       replies: []
     });

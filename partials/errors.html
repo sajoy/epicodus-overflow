@@ -32,5 +32,20 @@
 </form>
 
 <ul>
-  <li ng-repeat="item in errors">{{item.title}} , {{item.browser}}</li>
+  <li ng-repeat="item in errors">
+    <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
+      <h2>{{item.title}}</h2>
+      <p>{{item.message}}</p>
+      <p>{{item.name}}</p>
+    <a ui-sref="error({errorId: item.id})"><span class="glyphicon glyphicon-comment"></span></a>
+    </div>
+    <div class="errorDetails" ng-show="errorDetailsShow">
+      <p>{{item.details}}</p>
+      <p>
+        Time submitted: {{item.time}}</br>
+        Language: {{item.language}}</br>
+        Browser: {{item.browser}}
+      </p>
+    </div>
+  </li>
 </ul>
