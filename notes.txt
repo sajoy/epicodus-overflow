@@ -1,0 +1,34 @@
+Epicodus Overflow: an error log app for students of Epicodus!
+
+Using: Angular.js, Firebase
+
+https://www.firebase.com/pricing.html
+
+Notes:
+- landing page / default sort = current date
+- sorting: day, language
+- search: error, keywords
+- upvote & ditto similar enough to be in UtilitiesFactory
+
+
+objects:
+- error {
+    title: title, (max length)
+    error: message, (copy pasted error message)
+    details: elaborate,
+    names: names,
+    time: time,
+    language: language, (ie JS, HTML, framework?)
+    browser: checkbox default chrome,
+    replies: hasMany/ whatever it's called,
+    ditto: clickable badge or button or something to indicate significance/ prevalence
+}
+
+- replies {
+    names: names,
+    message: reply message,
+    upvotes: similar to ditto,
+    time: time
+}
+
+(default sorting should be by upvote then time)
