@@ -7,19 +7,32 @@ https://www.firebase.com/pricing.html
 
 
 Features needed:
-- Firebase implementation
-- landing page / default sort = current date
-- nav bar
-- archive
-- sorting: day, language
-- search: error, keywords
-- goal = full CRUD functionality (but delete not open to public),
-  hopefully Firebase will provide easy way to do this
-- awesome style
+1. Firebase implementation
+
+2. a) landing page / default sort = current date
+   b) archive sorted by days ?
+
+3. a) nav bar
+   b) search: error, keywords
+
+4. filter:
+   a) errors:
+      - filter by ditto, but new errors appear above
+      - see nerdNews example, using id
+   b) replies:
+      - add oneUp method to replies.upvotes
+      - filter by upvotes, but new replies appear below
+
+5. awesome style
+   a) show/hide add Error form
+
+
 
 Possible features:
 - angular animations
--
+- sorting: individual language pages
+- full CRUD functionality (but delete not open to public,
+    hopefully Firebase will provide easy way to do this)
 
 
 Completed features:
