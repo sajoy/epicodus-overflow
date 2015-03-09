@@ -39,6 +39,7 @@
       <p>{{item.name}}</p>
     <a ui-sref="error({errorId: item.id})"><span class="glyphicon glyphicon-comment"></span></a>
     </div>
+      <span ng-click="UtilitiesFactory.oneUp(item, 'ditto')" class="badge">{{item.ditto}} Me too!</span>
     <div class="errorDetails" ng-show="errorDetailsShow">
       <p>{{item.details}}</p>
       <p>

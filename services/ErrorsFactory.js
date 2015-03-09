@@ -21,5 +21,6 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
     factory.errorLanguage = null;
     factory.errorBrowser = null;
   }
+
   return factory;
 });

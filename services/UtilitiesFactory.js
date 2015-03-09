@@ -1,17 +1,18 @@
 epicodusOverflow.factory('UtilitiesFactory', function() {
-  return {
-    findById: function(collection, id) {
-      for (var i = 0; i < collection.length; i++) {
-        if (collection[i].id == id) {
-          return collection[i];
-        }
+  var factory = {};
+
+  factory.findById = function(collection, id) {
+    for (var i = 0; i < collection.length; i++) {
+      if (collection[i].id == id) {
+        return collection[i];
       }
-      return null;
     }
+    return null;
   };
-    // oneUp: function(item) {
-    //   item.popularity++;
-    // }
 
+  factory.oneUp = function(item, key) {
+    item[key]+=1;
+  }
 
+  return factory;
 });
