@@ -20,4 +20,10 @@ epicodusOverflow.config(function($stateProvider) {
     controller: "RepliesCtrl"
   });
 
+  $stateProvider.state('archive', {
+    url:"/archive",
+    templateUrl: "partials/archive.html",
+    controller: "ArchiveCtrl"
+  });
+
 });

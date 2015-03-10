@@ -1,0 +1,7 @@
+
+    <ul>
+      <li><ng-repeat="item in errors">
+        <p>{{item.title}}</p>
+        <a ui-sref="error({errorId: item.id})"><span class="glyphicon glyphicon-comment"></span></a>
+      </li>
+    </ul>
