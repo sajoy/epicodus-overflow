@@ -13,8 +13,8 @@ Features needed:
 2. a) landing page / default sort = current date
    b) archive sorted by days ?
 
-3. a) nav bar
-   b) search: error, keywords
+3. a) nav bar (done)
+   b) search: error, keywords (done?)
 
 4. filter:
    a) errors:

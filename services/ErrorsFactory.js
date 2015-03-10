@@ -20,7 +20,7 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
     factory.errorMessage = null;
     factory.errorDetails = null;
     factory.errorLanguage = null;
-    factory.errorBrowser = null;
+    factory.errorBrowser = "";
   };
 
   return factory;
