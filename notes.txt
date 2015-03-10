@@ -10,13 +10,7 @@ Features needed:
 1. Firebase implementation
    a) see Gabe & Jay's Slacker News
 
-2. a) landing page / default sort = current date
-   b) archive sorted by days ?
-
-3. a) nav bar (done)
-   b) search: error, keywords (done?)
-
-4. filter:
+2. filter:
    a) errors:
       - filter by ditto, but new errors appear above
       - see nerdNews example, using id
@@ -25,7 +19,7 @@ Features needed:
       - filter by upvotes, but new replies appear below
       - clear comments
 
-5. awesome style
+3. awesome style
    a) show/hide add Error form
 
 
@@ -35,7 +29,7 @@ Possible features:
 - sorting: individual language pages
 - full CRUD functionality (but delete not open to public,
     hopefully Firebase will provide easy way to do this)
-
+- archive sorted by month (pull from database?)
 
 Completed features:
 - upvote & ditto similar enough to be in UtilitiesFactory (oneUp)
