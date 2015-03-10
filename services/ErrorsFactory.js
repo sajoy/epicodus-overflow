@@ -1,4 +1,4 @@
-epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray) {
+epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray, $firebaseObject) {
 
   var factory = {};
   var ref = new Firebase("https://popping-fire-4683.firebaseio.com/Errors");
@@ -15,8 +15,10 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray)
       browser: factory.errorBrowser,
       time: (new Date()).toString(),
       ditto: 0,
-      replies: []
+      // replies: ["Put in some comments!"]
+      replies: [{name: "Your name here!", message: "Put in some comments!"}]
     });
+
     factory.errorTitle = null;
     factory.errorName = null;
     factory.errorMessage = null;
@@ -24,6 +26,15 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray)
     factory.errorLanguage = null;
     factory.errorBrowser = null;
   }
+  //
+  // factory.findById = function(id) {
+  //   debugger;
+  //   var error = factory.errors.$getRecord(id);
+  //   error.$loaded().then(function() {
+  //     console.log('loaded!');
+  //     return error;
+  //   });
+  // }
 
   return factory;
 });

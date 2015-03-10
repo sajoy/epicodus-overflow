@@ -1,9 +1,11 @@
-epicodusOverflow.factory('UtilitiesFactory', function() {
+epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory) {
   var factory = {};
 
-  factory.findById = function(collection, id) {
+  factory.findById = function(id) {
+    var collection = ErrorsFactory.errors;
+    debugger;
     for (var i = 0; i < collection.length; i++) {
-      if (collection[i].id == id) {
+      if (collection[i].$id == id) {
         return collection[i];
       }
     }
