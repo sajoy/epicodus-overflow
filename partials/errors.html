@@ -40,11 +40,10 @@
   <span ng-show="showForm" ng-click="showForm = false">
     <button type="submit" class="btn btn-default">Log an Error</button>
   </span>
-  <div class="col-md-6">
   <h2 ng-show="todaysErrors().length && filtered.length">Today's Errors</h2>
   <h2 ng-show="todaysErrors().length && !filtered.length">No Matches Found. Please Try Again.</h2>
-    <ul>
-      <li ng-repeat="item in filtered = (todaysErrors() | filter: query)">
+    <ul class="row">
+      <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | filter: query)">
         <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
           <h4><b>{{item.title}}</b></h4>
           <p>{{item.message}}</p>
@@ -62,5 +61,4 @@
         </div>
       </li>
     </ul>
-  </div>
 </div>
