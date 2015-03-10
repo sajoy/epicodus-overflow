@@ -12,27 +12,24 @@ Features needed:
 
 2. filter:
    a) errors:
-      - filter by ditto, but new errors appear above
+      - filter by ditto?, but new errors appear above
       - see nerdNews example, using id
    b) replies:
       - add oneUp method to replies.upvotes
-      - filter by upvotes, but new replies appear below
+      - filter by upvotes?
       - clear comments
 
 3. awesome style
-   a) show/hide add Error form
+  textareas?
+  mark required where applicable
 
 
 
 Possible features:
 - angular animations
-- sorting: individual language pages
 - full CRUD functionality (but delete not open to public,
     hopefully Firebase will provide easy way to do this)
 - archive sorted by month (pull from database?)
-
-Completed features:
-- upvote & ditto similar enough to be in UtilitiesFactory (oneUp)
 
 
 
