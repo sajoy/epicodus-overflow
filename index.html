@@ -12,11 +12,21 @@
     <script src="controllers/ErrorsController.js"></script>
     <script src="controllers/ErrorController.js"></script>
     <script src="controllers/RepliesController.js"></script>
+    <script src="controllers/ArchiveController.js"></script>
+    <script src="controllers/NavbarController.js"></script>
     <script src="services/ErrorsFactory.js"></script>
     <script src="services/UtilitiesFactory.js"></script>
 
   </head>
   <body>
+    <nav class='navbar navbar-default' role='navigation'>
+    <ul class='nav navbar-nav'>
+      <li><a ui-sref="errors">Home</a></li>
+      <li><a ui-sref="archive">Archive</a></li>
+    </ul>
+    </nav>
+
+
     <div class="container">
       <div ui-view></div>
     </div>

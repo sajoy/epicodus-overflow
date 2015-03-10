@@ -11,7 +11,7 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
       language: factory.errorLanguage,
       browser: factory.errorBrowser,
       time: (new Date()).toString(),
-      timeInt: (new Date()),
+      timeInt: new Date(),
       ditto: 0,
       replies: []
     });
