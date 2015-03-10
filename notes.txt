@@ -65,3 +65,25 @@ Objects:
 }
 
 (default sorting should be by upvote then time)
+
+
+
+
+
+Firebase layout?
+
+firebase = {
+  errors: [
+    {
+      // error properties
+      replies: [replyId, replyId]
+    }
+  ],
+
+  replies: [
+    {
+      // reply property
+      errorId:
+    }
+  ]
+}

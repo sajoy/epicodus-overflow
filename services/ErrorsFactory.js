@@ -1,9 +1,14 @@
-epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
+epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray) {
+
   var factory = {};
-  factory.errors = [];
+  var ref = new Firebase("https://popping-fire-4683.firebaseio.com/");
+  var sync = $firebaseArray(ref);
+  // var syncArray = sync.$asArray();
+  factory.errors = sync;
+
   factory.addError = function() {
-    factory.errors.push({
-      id: factory.errors.length + 1,
+    factory.errors.$add({
+      // id: factory.errors.length + 1,
       title: factory.errorTitle,
       name: factory.errorName,
       message: factory.errorMessage,
