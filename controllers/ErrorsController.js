@@ -19,8 +19,4 @@ epicodusOverflow.controller('ErrorsCtrl', function ErrorsCtrl($scope, ErrorsFact
     return todays;
   };
 
-
-
-
-
 });

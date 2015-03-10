@@ -23,6 +23,7 @@ Features needed:
    b) replies:
       - add oneUp method to replies.upvotes
       - filter by upvotes, but new replies appear below
+      - clear comments
 
 5. awesome style
    a) show/hide add Error form
