@@ -8,6 +8,7 @@ https://www.firebase.com/pricing.html
 
 Features needed:
 1. Firebase implementation
+   a) see Gabe & Jay's Slacker News
 
 2. a) landing page / default sort = current date
    b) archive sorted by days ?

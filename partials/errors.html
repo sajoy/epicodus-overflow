@@ -32,7 +32,7 @@
 </form>
 
 <ul>
-  <li ng-repeat="item in errors">
+  <li ng-repeat="item in filtered = (todaysErrors() | filter: query)">
     <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
       <h2>{{item.title}}</h2>
       <p>{{item.message}}</p>
