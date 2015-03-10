@@ -1,0 +1,29 @@
+input{
+  width: 250px;
+}
+
+.search{
+  margin-right: 20px;
+}
+
+
+html, body{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+}
+
+.navbar {
+  font-family: 'Poiret One', cursive;
+  font-weight: 600;
+}
+
+
+.hideMe {
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
+
+ul{
+ list-style-type: none;
+}
