@@ -1,5 +1,5 @@
 <ul>
-  <li ng-repeat="item in errors">
+  <li ng-repeat="item in errors | orderBy:'-date'">
     <p><a ui-sref="error({errorId: item.id})">{{item.title}}</a></p>
   </li>
 </ul>
