@@ -1,6 +1,6 @@
 <p> ALL </p>
 <ul>
-  <li ng-repeat="item in errors | orderBy:'-timeInt'">
+  <li ng-repeat="item in filtered = (errors | filter: query)">
     <p>Day:{{item.timeInt.getDate()}}</p>
     <p><a ui-sref="error({errorId: item.id})">{{item.title}}</a></p>
   </li>
