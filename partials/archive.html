@@ -1,5 +1,15 @@
+<p> ALL </p>
 <ul>
   <li ng-repeat="item in errors | orderBy:'-date'">
+    <p>Day:{{item.date.getDate()}}</p>
     <p><a ui-sref="error({errorId: item.id})">{{item.title}}</a></p>
   </li>
 </ul>
+
+<!-- <p>FILTERED</p>
+
+<ul>
+  <li ng-repeat="entry in ctrl.yearFilter">
+    <p><a ui-sref="error({errorId: item.id})">{{item.title}}</a></p>
+  </li>
+</ul> -->
