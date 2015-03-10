@@ -1,51 +1,52 @@
 <div class="row">
   <span class="form-group" ng-hide="showForm" ng-submit="showForm = true">
-    <div class="hideMe">
-      <form ng-submit="ErrorsFactory.addError()">
-        <div class="form-group">
-          <label for="title">What's your problem?</label>
-          <input type="text" id="title" ng-model="ErrorsFactory.errorTitle" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Who are you?</label>
-          <input type="text" id="name" ng-model="ErrorsFactory.errorName" required>
-        </div>
-        <div class="form-group">
-          <label for="message">What's your actual problem?</label>
-          <input type="text" id="message" ng-model="ErrorsFactory.errorMessage" placeholder="Copy & paste error message.">
-        </div>
-        <div class="form-group">
-          <label for="details">Care to elaborate?</label>
-          <input type="text" id="details" ng-model="ErrorsFactory.errorDetails">
-        </div>
-        <div class="form-group">
-          <label for="language">Watch your language!</label>
-          <input type="text" id="language" ng-model="ErrorsFactory.errorLanguage" placeholder="eg. Ruby v2.1.2" required>
-        </div>
-        <div class="form-group">
-          <label for="browser">What's your browser?</label>
-          <select id="browser" ng-init="ErrorsFactory.errorBrowser='Chrome'" ng-model="ErrorsFactory.errorBrowser">
-            <option>Chrome</option>
-            <option>Safari</option>
-            <option>FireFox</option>
-            <option>IE, really?</option>
-          </select>
-        </div>
-        <button type="submit" class="btn">Post</button>
-      </form>
+    <div class="col-md-6">
+      <div class="hideMe">
+        <form ng-submit="ErrorsFactory.addError()">
+          <div class="form-group">
+            <label for="title">What's your problem?</label><br />
+            <input type="text" id="title" ng-model="ErrorsFactory.errorTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Who are you?</label><br />
+            <input type="text" id="name" ng-model="ErrorsFactory.errorName" required>
+          </div>
+          <div class="form-group">
+            <label for="message">What's your actual problem?</label><br />
+            <input type="text" id="message" ng-model="ErrorsFactory.errorMessage" placeholder="Copy & paste error message.">
+          </div>
+          <div class="form-group">
+            <label for="details">Care to elaborate?</label><br />
+            <input type="text" id="details" ng-model="ErrorsFactory.errorDetails">
+          </div>
+          <div class="form-group">
+            <label for="language">Watch your language!</label><br />
+            <input type="text" id="language" ng-model="ErrorsFactory.errorLanguage" placeholder="eg. Ruby v2.1.2" required>
+          </div>
+          <div class="form-group">
+            <label for="browser">What's your browser?</label><br />
+            <select id="browser" ng-init="ErrorsFactory.errorBrowser='Chrome'" ng-model="ErrorsFactory.errorBrowser">
+              <option>Chrome</option>
+              <option>Safari</option>
+              <option>FireFox</option>
+              <option>IE, really?</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Post</button>
+        </form>
+      </div>
     </div>
   </span>
   <span ng-show="showForm" ng-click="showForm = false">
     <button type="submit" class="btn btn-default">Log an Error</button>
   </span>
-</div>
-
-<div class="row">
   <div class="col-md-6">
+  <h2 ng-show="todaysErrors().length && filtered.length">Today's Errors</h2>
+  <h2 ng-show="todaysErrors().length && !filtered.length">No Matches Found. Please Try Again.</h2>
     <ul>
       <li ng-repeat="item in filtered = (todaysErrors() | filter: query)">
         <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
-          <h2>{{item.title}}</h2>
+          <h4><b>{{item.title}}</b></h4>
           <p>{{item.message}}</p>
           <p>{{item.name}}</p>
         <a ui-sref="error({errorId: item.id})"><span class="glyphicon glyphicon-comment"></span></a>
