@@ -5,23 +5,23 @@
         <form ng-submit="ErrorsFactory.addError()">
           <div class="form-group">
             <label for="title">What's your problem?</label><br />
-            <input type="text" id="title" ng-model="ErrorsFactory.errorTitle" required>
+            <input type="text" id="title" ng-model="ErrorsFactory.errorTitle" placeholder="e.g. 'Data is not showing'" required>
           </div>
           <div class="form-group">
             <label for="name">Who are you?</label><br />
-            <input type="text" id="name" ng-model="ErrorsFactory.errorName" required>
+            <input type="text" id="name" ng-model="ErrorsFactory.errorName" placeholder="You & your partner's names" required>
           </div>
           <div class="form-group">
             <label for="message">What's your actual problem?</label><br />
-            <input type="text" id="message" ng-model="ErrorsFactory.errorMessage" placeholder="Copy & paste error message.">
+            <input type="text" id="message" ng-model="ErrorsFactory.errorMessage" placeholder="Copy & paste error message">
           </div>
           <div class="form-group">
             <label for="details">Care to elaborate?</label><br />
-            <input type="text" id="details" ng-model="ErrorsFactory.errorDetails">
+            <textarea type="text" id="details" rows="5" ng-model="ErrorsFactory.errorDetails" placeholder="'This is very frustrating because...'"></textarea>
           </div>
           <div class="form-group">
             <label for="language">Watch your language!</label><br />
-            <input type="text" id="language" ng-model="ErrorsFactory.errorLanguage" placeholder="eg. Ruby v2.1.2" required>
+            <input type="text" id="language" ng-model="ErrorsFactory.errorLanguage" placeholder="e.g. Ruby, Javascript, etc." required>
           </div>
           <div class="form-group">
             <label for="browser">What's your browser?</label><br />
