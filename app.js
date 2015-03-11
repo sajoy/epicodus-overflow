@@ -1,9 +1,9 @@
 var epicodusOverflow = angular.module('epicodusOverflow', ['ui.router']);
 
-epicodusOverflow.config(function($stateProvider) {
+epicodusOverflow.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('errors', {
-    url:"",
+    url:"/",
     templateUrl: "partials/errors.html",
     controller: "ErrorsCtrl"
   });
@@ -25,5 +25,7 @@ epicodusOverflow.config(function($stateProvider) {
     templateUrl: "partials/archive.html",
     controller: "ArchiveCtrl"
   });
+
+  $urlRouterProvider.otherwise("/");
 
 });
