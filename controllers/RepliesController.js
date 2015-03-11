@@ -1,11 +1,16 @@
 epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl($scope, $stateParams, ErrorsFactory, UtilitiesFactory, $firebaseArray, $firebaseObject) {
 
   $scope.UtilitiesFactory = UtilitiesFactory;
+  $scope.ErrorsFactory = ErrorsFactory;
 
-  $scope.addReply = function() {
-    if ($scope.error.replies[0].message === "Put in some comments!") {
-      $scope.error.replies[0].remove();
-    }
+  $scope.errors = $scope.ErrorsFactory.errorsRef;
+
+  $scope.addReply = function(errorId) {
+
+    var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Errors1/" + errorId + "/replies");
+    var sync = $firebaseArray(repliesRef);
+
+    var errorRepliesRef = $scope.errors.child(errorId).child("replies");
 
     $scope.error.replies.$push({
       name: $scope.replyName,

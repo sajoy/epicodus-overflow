@@ -73,17 +73,37 @@ Objects:
 Firebase layout?
 
 firebase = {
-  errors: [
-    {
-      // error properties
-      replies: [replyId, replyId]
+  errors: {
+    error1id: {
+      title: title, (max length)
+      error: message, (copy pasted error message)
+      details: elaborate,
+      names: names,
+      time: time,
+      language: language, (ie JS, HTML, framework?)
+      browser: checkbox default chrome,
+      ditto: clickable badge or button or something to indicate significance/ prevalence,
+      replies: {
+        replyId1: true,
+        replyId2: true
+      }
     }
-  ],
+  },
 
-  replies: [
-    {
-      // reply property
-      errorId:
+  replies: {
+    replyId1: {
+      names: names,
+      message: reply message,
+      upvotes: similar to ditto,
+      time: time,
+      error: error1id
     }
-  ]
+    replyId2: {
+      names: names,
+      message: reply message,
+      upvotes: similar to ditto,
+      time: time,
+      error: error1id
+    }
+  }
 }

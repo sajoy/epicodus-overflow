@@ -1,8 +1,8 @@
 epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray, $firebaseObject) {
 
   var factory = {};
-  var ref = new Firebase("https://popping-fire-4683.firebaseio.com/Errors");
-  var sync = $firebaseArray(ref);
+  factory.errorsRef = new Firebase("https://popping-fire-4683.firebaseio.com/Errors1");
+  var sync = $firebaseArray(factory.errorsRef);
   factory.errors = sync;
 
   factory.addError = function() {
@@ -14,9 +14,7 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray,
       language: factory.errorLanguage,
       browser: factory.errorBrowser,
       time: (new Date()).toString(),
-      ditto: 0,
-      // replies: ["Put in some comments!"]
-      replies: [{name: "Your name here!", message: "Put in some comments!"}]
+      ditto: 0
     });
 
     factory.errorTitle = null;
@@ -26,15 +24,6 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray,
     factory.errorLanguage = null;
     factory.errorBrowser = null;
   }
-  //
-  // factory.findById = function(id) {
-  //   debugger;
-  //   var error = factory.errors.$getRecord(id);
-  //   error.$loaded().then(function() {
-  //     console.log('loaded!');
-  //     return error;
-  //   });
-  // }
 
   return factory;
 });
