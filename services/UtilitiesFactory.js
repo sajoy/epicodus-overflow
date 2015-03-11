@@ -1,15 +1,10 @@
-epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory) {
+epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory, $firebaseObject) {
   var factory = {};
 
+
   factory.findById = function(id) {
-    var collection = ErrorsFactory.errors;
-    debugger;
-    for (var i = 0; i < collection.length; i++) {
-      if (collection[i].$id == id) {
-        return collection[i];
-      }
-    }
-    return null;
+    var error =  ErrorsFactory.errorsRef.child(id);
+    return $firebaseObject(error);
   };
 
   factory.oneUp = function(item, key) {
