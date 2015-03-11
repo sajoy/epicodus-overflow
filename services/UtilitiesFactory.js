@@ -13,7 +13,8 @@ epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory) {
   };
 
   factory.oneUp = function(item, key) {
-    item[key]+=1;
+    (item[key]+=1).$save();
+
   }
 
   return factory;
