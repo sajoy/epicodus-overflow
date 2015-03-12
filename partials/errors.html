@@ -42,23 +42,23 @@
   </span>
   <h2 ng-show="todaysErrors().length && filtered.length">Today's Errors</h2>
   <h2 ng-show="todaysErrors().length && !filtered.length">No Matches Found. Please Try Again.</h2>
-    <ul class="row">
-      <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | filter: query)">
-        <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
-          <h4><b>{{item.title}}</b></h4>
-          <p>{{item.message}}</p>
-          <p>{{item.name}}</p>
-        <a ui-sref="error({errorId: item.id})"><span class="glyphicon glyphicon-comment"></span></a>
-        </div>
-          <span ng-click="UtilitiesFactory.oneUp(item, 'ditto')" class="badge">{{item.ditto}} Me too!</span>
-        <div class="errorDetails" ng-show="errorDetailsShow">
-          <p>{{item.details}}</p>
-          <p>
-            Time submitted: {{item.time}}</br>
-            Language: {{item.language}}</br>
-            Browser: {{item.browser}}
-          </p>
-        </div>
-      </li>
-    </ul>
+  <ul class="row">
+    <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | filter: query)">
+      <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
+        <h4><b>{{item.title}}</b></h4>
+        <p>{{item.message}}</p>
+        <p>{{item.name}}</p>
+        <a ui-sref="error({errorId: item.$id})"><span class="glyphicon glyphicon-comment"></span></a>
+      </div>
+      <span ng-click="oneUp(item)" class="badge">{{item.ditto}} Me too!</span>
+      <div class="errorDetails" ng-show="errorDetailsShow">
+        <p>{{item.details}}</p>
+        <p>
+          Time submitted: {{item.time}}</br>
+          Language: {{item.language}}</br>
+          Browser: {{item.browser}}
+        </p>
+      </div>
+    </li>
+  </ul>
 </div>

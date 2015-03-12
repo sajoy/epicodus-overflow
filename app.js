@@ -1,4 +1,4 @@
-var epicodusOverflow = angular.module('epicodusOverflow', ['ui.router']);
+var epicodusOverflow = angular.module('epicodusOverflow', ['ui.router', 'firebase']);
 
 epicodusOverflow.config(function($stateProvider, $urlRouterProvider) {
 

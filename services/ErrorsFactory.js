@@ -1,21 +1,12 @@
-epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
+epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray, $firebaseObject) {
+
   var factory = {};
-  factory.errors = [
-    { id: 1,
-      title: "Sample Past Date",
-      name: "Jackie",
-      message: "testing",
-      details: "more details",
-      language: "Ruby",
-      browser: "Chrome",
-      time: "Mon Mar 09 2014",
-      timeInt: new Date(2014, 03, 09),
-    }
-  ];
+  factory.errorsRef = new Firebase("https://popping-fire-4683.firebaseio.com/Errors");
+  var sync = $firebaseArray(factory.errorsRef);
+  factory.errors = sync;
 
   factory.addError = function() {
-    factory.errors.push({
-      id: factory.errors.length + 1,
+    factory.errors.$add({
       title: factory.errorTitle,
       name: factory.errorName,
       message: factory.errorMessage,
@@ -24,15 +15,15 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory() {
       browser: factory.errorBrowser,
       time: (new Date()).toString(),
       timeInt: new Date(),
-      ditto: 0,
-      replies: []
+      ditto: 0
     });
+
     factory.errorTitle = null;
     factory.errorName = null;
     factory.errorMessage = null;
     factory.errorDetails = null;
     factory.errorLanguage = null;
-    factory.errorBrowser = "";
+    factory.errorBrowser = "Chrome";
   };
 
   return factory;
