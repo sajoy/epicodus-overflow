@@ -13,8 +13,7 @@ epicodusOverflow.factory('ErrorsFactory', function ErrorsFactory($firebaseArray,
       details: factory.errorDetails,
       language: factory.errorLanguage,
       browser: factory.errorBrowser,
-      time: (new Date()).toString(),
-      timeInt: new Date(),
+      time: (new Date()).toString().slice(0, 15),
       ditto: 0
     });
 

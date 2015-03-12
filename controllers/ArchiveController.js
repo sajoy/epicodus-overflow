@@ -7,10 +7,10 @@ epicodusOverflow.controller('ArchiveCtrl', function ArchiveCtrl($scope, ErrorsFa
 
   $scope.priorYears = function() {
     var oldest = [];
-    var today = new Date();
-    var year = today.getYear();
+    var today = (new Date()).toString();
+    var year = today.split(" ")[3];
     $scope.errors.forEach (function(error) {
-      if (error.timeInt.getYear() !== year) {
+      if (error.time.split(" ")[3] !== year) {
         oldest.push(error);
       }
     });
@@ -19,11 +19,11 @@ epicodusOverflow.controller('ArchiveCtrl', function ArchiveCtrl($scope, ErrorsFa
 
   $scope.priorMonths = function() {
     var older = [];
-    var today = new Date();
-    var year = today.getYear();
-    var month = today.getMonth();
+    var today = (new Date()).toString();
+    var year = today.split(" ")[3];
+    var month = today.split(" ")[1];
     $scope.errors.forEach (function(error) {
-      if (error.timeInt.getYear() === year && error.timeInt.getMonth() !== month) {
+      if (error.time.split(" ")[3] === year && error.time.split(" ")[1] !== month) {
         older.push(error);
       }
     });
@@ -32,11 +32,11 @@ epicodusOverflow.controller('ArchiveCtrl', function ArchiveCtrl($scope, ErrorsFa
 
   $scope.thisMonth = function() {
     var oldish = [];
-    var today = new Date();
-    var year = today.getYear();
-    var month = today.getMonth();
+    var today = (new Date()).toString();
+    var year = today.split(" ")[3];
+    var month = today.split(" ")[1];
     $scope.errors.forEach (function(error) {
-      if (error.timeInt.getYear() === year && error.timeInt.getMonth() === month) {
+      if (error.time.split(" ")[3] === year && error.time.split(" ")[1] === month) {
         oldish.push(error);
       }
     });

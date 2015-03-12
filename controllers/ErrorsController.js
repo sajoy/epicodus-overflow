@@ -6,12 +6,12 @@ epicodusOverflow.controller('ErrorsCtrl', function ErrorsCtrl($scope, ErrorsFact
 
   $scope.todaysErrors = function() {
     var todays = [];
-    var today = new Date();
-    var day = today.getDate();
-    var month = today.getMonth();
-    var year = today.getYear();
+    var today = (new Date()).toString();
+    var day = today.split(" ")[2];
+    var month = today.split(" ")[1];
+    var year = today.split(" ")[3];
     $scope.errors.forEach( function(error) {
-      if (error.timeInt.getDate() === day && error.timeInt.getMonth() === month && error.timeInt.getYear() === year) {
+      if (error.time.split(" ")[2] === day && error.time.split(" ")[1] === month && error.time.split(" ")[3] === year) {
         todays.push(error)
       }
     });
