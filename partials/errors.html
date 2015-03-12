@@ -48,15 +48,15 @@
         <h4><b>{{item.title}}</b></h4>
         <p>{{item.message}}</p>
         <p>{{item.name}}</p>
-        <a ui-sref="error({errorId: item.$id})"><span class="glyphicon glyphicon-comment"></span></a>
+        <a ui-sref="error({errorId: item.$id})"><span class="badge glyphicon glyphicon-comment"> comments</span></a>
       </div>
-      <span ng-click="oneUp(item)" class="badge">{{item.ditto}} Me too!</span>
+      <span ng-click="oneUp(item)" class="badge me-too">{{item.ditto}} Me too!</span>
       <div class="errorDetails" ng-show="errorDetailsShow">
         <p>{{item.details}}</p>
         <p>
           Time submitted: {{item.time}}</br>
           Language: {{item.language}}</br>
-          Browser: {{item.browser}}
+          Browser: {{item.browser}} </br>
         </p>
       </div>
     </li>

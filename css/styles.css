@@ -1,29 +1,60 @@
-textarea, input{
-  width: 250px;
-}
-
-.search{
-  margin-right: 20px;
-}
-
-
 html, body{
   font-family: 'Oxygen', sans-serif;
   font-size: 1em;
 }
 
-.navbar {
-  font-family: 'Poiret One', cursive;
-  font-weight: 600;
+textarea, input{
+  width: 250px;
 }
-
-
-.hideMe {
-  margin-left: 5%;
-  margin-top: 20px;
-}
-
 
 ul{
  list-style-type: none;
+}
+
+.btn {
+  background-color: #f05a26;
+  color: #fff;
+  border-color: #d43f3a;
+}
+
+.btn:hover {
+  background-color: #d43f3a;
+  color: #fff;
+}
+
+/************* Navbar */
+.search{
+  margin-right: 20px;
+}
+
+.navbar {
+  font-family: 'Poiret One', cursive;
+  font-weight: 600;
+  background-color: #f05a26;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #FFFFFF;
+}
+
+.badge:hover {
+  cursor: pointer;
+  color: #474747;
+}
+
+.glyphicon-comment {
+  background-color: #f05a26;
+  font-size: 10px;
+}
+
+.me-too {
+  background-color: #3385FF;
+  font-size: 11px;
+}
+
+
+/*************  Home */
+.hideMe {
+  margin-left: 5%;
+  margin-top: 20px;
 }
