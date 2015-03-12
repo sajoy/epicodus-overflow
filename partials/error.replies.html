@@ -12,5 +12,5 @@
 </form>
 
 <ul>
-  <li ng-repeat="item in Replies1">{{item.name}} {{item.message}}</li>
+  <li ng-repeat="item in Replies1 | filter:  error = errorFId ">{{item.name}} {{item.message}}</li>
 </ul>
