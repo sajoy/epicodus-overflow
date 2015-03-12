@@ -8,7 +8,8 @@ epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory, $firebaseOb
   };
 
   factory.oneUp = function(item, key) {
-    item[key]+=1;
+    (item[key]+=1).$save();
+
   }
 
   return factory;
