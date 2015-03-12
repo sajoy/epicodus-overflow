@@ -3,7 +3,7 @@ epicodusOverflow.factory('UtilitiesFactory', function(ErrorsFactory, $firebaseOb
 
 
   factory.findById = function(id) {
-    var error =  ErrorsFactory.errorsRef.child(id);
+    var error = ErrorsFactory.errorsRef.child(id);
     return $firebaseObject(error);
   };
 

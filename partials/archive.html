@@ -2,21 +2,21 @@
 <h4>This Month:</h4>
 <ul>
   <li ng-repeat="item in filtered = (thisMonth() | orderBy:'-timeInt' : true )">
-    <p><a ui-sref="error({errorId: item.id})">{{item.title}}: {{item.time}}</a></p>
+    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
   </li>
 </ul>
 
 <h4>Prior Months:</h4>
 <ul>
   <li ng-repeat="item in filtered = (priorMonths() | orderBy:'-timeInt' : true | filter: query)">
-    <p><a ui-sref="error({errorId: item.id})">{{item.title}}: {{item.time}}</a></p>
+    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
   </li>
 </ul>
 
 <h4>Prior Years:</h4>
 <ul>
   <li ng-repeat="item in filtered = (priorYears() | orderBy:'-timeInt' : true | filter: query)">
-    <p><a ui-sref="error({errorId: item.id})">{{item.title}}: {{item.time}}</a></p>
+    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
   </li>
 </ul>
 
