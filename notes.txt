@@ -26,6 +26,7 @@ Features needed:
 
 
 Possible features:
+- {{item.keys(item.replies).length}}
 - angular animations
 - full CRUD functionality (but delete not open to public,
     hopefully Firebase will provide easy way to do this)

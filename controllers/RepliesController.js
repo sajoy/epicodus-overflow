@@ -1,5 +1,5 @@
 epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
-  $scope, $stateParams, ErrorsFactory, UtilitiesFactory, $firebaseArray, $firebaseObject) {
+  $scope, $state, $stateParams, ErrorsFactory, UtilitiesFactory, $firebaseArray, $firebaseObject) {
 
   $scope.UtilitiesFactory = UtilitiesFactory;
   $scope.ErrorsFactory = ErrorsFactory;

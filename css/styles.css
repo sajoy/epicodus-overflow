@@ -1,25 +1,12 @@
 html, body{
   font-family: 'Oxygen', sans-serif;
   font-size: 1em;
+  background-color: #ecf0f1;
 }
 
-textarea, input{
-  width: 250px;
-}
 
 ul{
  list-style-type: none;
-}
-
-.btn {
-  background-color: #f05a26;
-  color: #fff;
-  border-color: #d43f3a;
-}
-
-.btn:hover {
-  background-color: #d43f3a;
-  color: #fff;
 }
 
 /************* Navbar */
@@ -31,10 +18,11 @@ ul{
   font-family: 'Poiret One', cursive;
   font-weight: 600;
   background-color: #f05a26;
+  padding: auto 1em;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .badge:hover {
@@ -52,9 +40,48 @@ ul{
   font-size: 11px;
 }
 
+.navbar input{
+  margin-right: 10px;
+}
 
-/*************  Home */
+/***************  forms */
+.main-form {
+  border: solid 1px maroon;
+  border-radius: 30px;
+  padding: 1em 2em 1em 2em;
+  background-color: #fff;
+}
+
+textarea, input{
+  width: 250px;
+}
+
+.btn {
+  background-color: #f05a26;
+  color: #fff;
+  border-color: #d43f3a;
+}
+
+.btn:hover {
+  background-color: #d43f3a;
+  color: #fff;
+}
+
+.must {
+  color: #f05a26;
+}
+
+
+/*************  Home only */
 .hideMe {
   margin-left: 5%;
   margin-top: 20px;
+}
+
+.btn-warning {
+  background-color: #d43f3a;
+}
+
+.btn-warning:hover {
+  background-color: maroon;
 }
