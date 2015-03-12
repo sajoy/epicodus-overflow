@@ -1,18 +1,17 @@
 <div class="well">
-  <h2>{{error.title}}</h2>
-  <p>Error message: {{error.message}}</p>
-  <p>Submitted by: {{error.name}}</p>
-  <p>{{error.details}}</p>
+  <h2>{{currentError.title}}</h2>
+  <p>Error message: {{currentError.message}}</p>
+  <p>Submitted by: {{currentError.name}}</p>
+  <p>{{currentError.details}}</p>
   <p>
-    Time submitted: {{error.time}}</br>
-    Language: {{error.language}}</br>
-    Browser: {{error.browser}}
+    Time submitted: {{currentError.time}}</br>
+    Language: {{currentError.language}}</br>
+    Browser: {{currentError.browser}}
   </p>
 </div>
 
-
 <ul>
-  <li ng-repeat="item in replies">{{item.name}} {{item.message}}</li>
+  <li ng-repeat="item in Replies1 | filter:  error = errorFId ">{{item.name}} {{item.message}}</li>
 </ul>
 
 <a ui-sref="error.replies">Add comment</a>
