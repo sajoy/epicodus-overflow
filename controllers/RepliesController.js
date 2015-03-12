@@ -2,8 +2,8 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
   $scope, $stateParams, ErrorsFactory, UtilitiesFactory, $firebaseArray, $firebaseObject) {
 
   $scope.UtilitiesFactory = UtilitiesFactory;
-
   $scope.ErrorsFactory = ErrorsFactory;
+
   $scope.errors = $scope.ErrorsFactory.errorsRef;
   $scope.error = UtilitiesFactory.findById($stateParams.errorId);
   $scope.errorFId = $scope.error.$id;
@@ -15,8 +15,6 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
 
   $scope.addReply = function() {
     $scope.error = UtilitiesFactory.findById($stateParams.errorId);
-    var errorFId = $scope.error.$id;
-
     var newReplyRef = bigRepliesObj.$add({
       name: $scope.replyName,
       message: $scope.replyMessage,
@@ -25,14 +23,9 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
       error: $scope.error.$id
     }).then(function(ref) {
       var replyId = ref.key();
-      var deepRef = $scope.errors.child($scope.error.$id + "/replies/" + replyId );
+      var deepRef = $scope.errors.child($scope.error + "/replies/" + replyId ); //in here $scope.error only returns id
       deepRef.set(true);
-
-      new Firebase('https://popping-fire-4683.firebaseio.com/Replies1').child(replyId).once('value', function(snap) {
-       console.log('I fetched a reply!', snap.val());
-      });
     });
   }
-
 
 });
