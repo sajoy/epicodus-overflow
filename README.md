@@ -10,8 +10,6 @@ Have you ever wanted to comment on another person's shortcomings, laughing at th
 
 If any of these sound like you, we build this app with you in mind.
 
-```
-
 ### Authors
 
 Tyler Brown
