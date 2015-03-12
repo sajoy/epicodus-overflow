@@ -43,7 +43,7 @@
   <h2 ng-show="todaysErrors().length && filtered.length">Today's Errors</h2>
   <h2 ng-show="todaysErrors().length && !filtered.length">No Matches Found. Please Try Again.</h2>
   <ul class="row">
-    <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | filter: query)">
+    <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | orderBy: '-$id' | filter: query)">
       <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
         <h4><b>{{item.title}}</b></h4>
         <p>{{item.message}}</p>

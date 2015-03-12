@@ -7,7 +7,7 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
   $scope.errors = $scope.ErrorsFactory.errorsRef;
   $scope.error = UtilitiesFactory.findById($stateParams.errorId);
 
-  var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies1");
+  var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies");
   var syncRepliesRef = $firebaseArray(repliesRef);
   var bigRepliesObj = syncRepliesRef;
 
@@ -24,6 +24,9 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
       var deepRef = $scope.errors.child($scope.error.$id + "/replies/" + replyId ); //in here $scope.error only returns id
       deepRef.set(true);
     });
+
+    $scope.replyName = null;
+    $scope.replyMessage = null;
   }
 
 });

@@ -5,8 +5,8 @@ epicodusOverflow.controller('ErrorCtrl', function ErrorCtrl($scope, $stateParams
   $scope.ErrorsFactory = ErrorsFactory;
   $scope.errorFId = $scope.currentError.$id;
 
-  var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies1");
+  var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies");
   var syncRepliesRef = $firebaseArray(repliesRef);
-  $scope.Replies1 = syncRepliesRef;
+  $scope.Replies = syncRepliesRef;
 
 });
