@@ -8,12 +8,12 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
   $scope.error = UtilitiesFactory.findById($stateParams.errorId);
 
   var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies1");
-  var sync = $firebaseArray(repliesRef);
-  $scope.replies = sync;
+  var syncRepliesRef = $firebaseArray(repliesRef);
+  var bigRepliesObj = syncRepliesRef;
 
   $scope.addReply = function() {
 
-    var newReplyRef = $scope.replies.$add({
+    var newReplyRef = bigRepliesObj.$add({
       name: $scope.replyName,
       message: $scope.replyMessage,
       time: (new Date()).toString(),
@@ -23,14 +23,18 @@ epicodusOverflow.controller('RepliesCtrl', function RepliesCtrl(
       var replyId = ref.key();
       var deepRef = $scope.errors.child($scope.error.$id + "/replies/" + replyId );
       deepRef.set(true);
-      syncRepliesChildRef.$save().then(function(ref) {
-        ref.key() === syncRepliesChildRef.$id; // true
+      // syncRepliesChildRef.$save().then(function(ref) {
+      //   ref.key() === syncRepliesChildRef.$id;
+      // });
+      new Firebase('https://popping-fire-4683.firebaseio.com/Replies1').child(replyId).once('value', function(snap) {
+       console.log('I fetched a reply!', snap.val());
       });
-
     });
 
-  }
+    var repliesRef = new Firebase('https://popping-fire-4683.firebaseio.com/Replies1');
+    $scope.Replies1 = $firebaseArray(repliesRef);
 
+  }
 
 
 });
