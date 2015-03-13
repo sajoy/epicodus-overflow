@@ -107,6 +107,32 @@ textarea, input{
   background-color: maroon;
 }
 
+.errorEssence {
+  max-height: 300px;
+  margin-top: 10%;
+  border: 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 8%;
+  overflow: auto;
+}
+
+.errorEssence:hover {
+  cursor: pointer;
+}
+
+.errorDetails {
+  font-size: .75em;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color: #222;
+}
+
 
 /***********  Error/Replies */
 .core-details h2{
@@ -145,30 +171,3 @@ textarea, input{
 .scroll {
   max-height: 600px;
   overflow: auto;
-}
-
-.errorEssence {
-  max-height: 300px;
-  margin-top: 10%;
-  border: 1px;
-  border-color: #000;
-  border-style: solid;
-  padding: 8%;
-  overflow: auto;
-}
-
-.errorEssence:hover {
-  cursor: pointer;
-}
-
-.errorDetails {
-  font-size: .75em;
-}
-
-.title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
-  color: #222;
-}
