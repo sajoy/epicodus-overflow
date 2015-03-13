@@ -25,8 +25,7 @@ The archive keeps the record of all errors. Since you can search for errors rela
 3. `python -m HTTPServer"`
 4. visit localhost:8000
 
-# Known Bugs
-1. OrderBy "-$id" doesn't always seem to order correctly
+# No Known Bugs
 
 # Possible Future Features
 1. Add ability to search replies
