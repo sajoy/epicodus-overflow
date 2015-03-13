@@ -46,10 +46,10 @@
   <ul class="row">
     <li class="col-lg-4 col-md-4 col-sm-4 col-xs 4" ng-repeat="item in filtered = (todaysErrors() | orderBy: '-$id' | filter: query)">
       <div class="errorEssence" ng-click="errorDetailsShow = !errorDetailsShow">
-        <h4 class="title"><a ui-sref="error.replies({errorId: item.$id})">{{item.title}}</a></h4>
+        <h4 class="title"><a ui-sref="error({errorId: item.$id})">{{item.title}}</a></h4>
         <p><i><b>Message: </b>{{item.message}}</i></p>
         <p>By: {{item.name}}</p>
-        <a ui-sref="error.replies({errorId: item.$id})"><span class="badge glyphicon glyphicon-comment"> replies</span></a>
+        <a ui-sref="error({errorId: item.$id})"><span class="badge glyphicon glyphicon-comment"> replies</span></a>
         <span ng-click="oneUp(item)" class="badge me-too">{{item.ditto}} Me too!</span>
         <div class="errorDetails" ng-show="errorDetailsShow">
           <p>{{item.details}}</p>
