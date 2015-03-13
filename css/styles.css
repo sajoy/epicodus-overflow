@@ -46,20 +46,6 @@ a:hover {
 
 }
 
-.badge:hover {
-  cursor: pointer;
-  color: #474747;
-}
-
-.glyphicon-comment {
-  background-color: #f05a26;
-  font-size: 10px;
-}
-
-.me-too {
-  background-color: #3385FF;
-  font-size: 11px;
-}
 
 .navbar input{
   margin-right: 10px;
@@ -133,6 +119,20 @@ textarea, input{
   color: #222;
 }
 
+.badge:hover {
+  cursor: pointer;
+  color: #474747;
+}
+
+.glyphicon-comment {
+  background-color: #f05a26;
+  font-size: 10px;
+}
+
+.me-too {
+  background-color: #3385FF;
+  font-size: 11px;
+}
 
 /***********  Error/Replies */
 .core-details h2{
@@ -152,7 +152,6 @@ textarea, input{
   margin: auto 25px 5px;
 }
 
-
 .alternating > div:nth-of-type(2n+1){
   background-color: white;
   padding: 2px ;
@@ -162,6 +161,10 @@ textarea, input{
   margin-bottom: 20px;
 }
 
+.glyphicon-thumbs-up {
+  background-color: #3385FF;
+  font-size: 11px;
+}
 
 /*************** Archive */
 .archive h3:hover {

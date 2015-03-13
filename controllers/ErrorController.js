@@ -6,8 +6,8 @@ epicodusOverflow.controller('ErrorCtrl', function ErrorCtrl($scope, $state, $sta
   $scope.errorFId = $scope.currentError.$id;
   $scope.errors = $scope.ErrorsFactory.errorsRef;
 
-  var repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies");
-  var syncRepliesRef = $firebaseArray(repliesRef);
+  $scope.repliesRef = new Firebase("https://popping-fire-4683.firebaseio.com/Replies");
+  var syncRepliesRef = $firebaseArray($scope.repliesRef);
   $scope.Replies = syncRepliesRef;
 
   $scope.addReply = function() {
@@ -28,5 +28,13 @@ epicodusOverflow.controller('ErrorCtrl', function ErrorCtrl($scope, $state, $sta
     $scope.replyMessage = null;
   }
 
+  $scope.oneUp = function(reply) {
+    var replyRef =  $scope.repliesRef.child(reply.$id);
+    $scope.reply = $firebaseObject(replyRef);
+    replyRef.transaction(function(current_value) {
+      current_value.upvote++;
+      return current_value;
+    });
+  }
 
 });
