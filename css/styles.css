@@ -1,13 +1,33 @@
 html, body{
   font-family: 'Oxygen', sans-serif;
   font-size: 1em;
+  color: #222;
   background-color: #ecf0f1;
 }
 
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4em;
+  color: #222;
+
+
+}
 
 ul{
  list-style-type: none;
 }
+
+a {
+  color: #222;
+
+}
+
+a:hover {
+  color: #cccccc;
+}
+
 
 /************* Navbar */
 .search{
@@ -23,6 +43,7 @@ ul{
 
 .navbar-default .navbar-nav>li>a {
   color: #fff;
+
 }
 
 .badge:hover {
@@ -86,6 +107,7 @@ textarea, input{
   background-color: maroon;
 }
 
+
 /***********  Error/Replies */
 .core-details h2{
   margin-bottom: 0;
@@ -123,4 +145,30 @@ textarea, input{
 .scroll {
   max-height: 600px;
   overflow: auto;
+}
+
+.errorEssence {
+  max-height: 300px;
+  margin-top: 10%;
+  border: 1px;
+  border-color: #000;
+  border-style: solid;
+  padding: 8%;
+  overflow: auto;
+}
+
+.errorEssence:hover {
+  cursor: pointer;
+}
+
+.errorDetails {
+  font-size: .75em;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color: #222;
 }
