@@ -85,3 +85,14 @@ textarea, input{
 .btn-warning:hover {
   background-color: maroon;
 }
+
+
+/*************** Archive */
+.archive h3:hover {
+  cursor: pointer;
+}
+
+.scroll {
+  max-height: 600px;
+  overflow: auto;
+}
