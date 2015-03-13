@@ -85,3 +85,42 @@ textarea, input{
 .btn-warning:hover {
   background-color: maroon;
 }
+
+/***********  Error/Replies */
+.core-details h2{
+  margin-bottom: 0;
+}
+
+.minor-details{
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+.minor-details li{
+  margin-right: 1em;
+}
+
+.the-message{
+  margin: auto 25px 5px;
+}
+
+
+.alternating > div:nth-of-type(2n+1){
+  background-color: white;
+  padding: 2px ;
+}
+
+.alternating > div{
+  padding-bottom: 20px ;
+}
+
+
+
+/*dl{
+  overflow: hidden;
+  width: 100%;
+}
+
+dt.ng-binding {
+  text-align: left;
+}*/
