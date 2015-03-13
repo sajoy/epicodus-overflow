@@ -14,12 +14,6 @@ epicodusOverflow.config(function($stateProvider, $urlRouterProvider) {
     controller: "ErrorCtrl"
   });
 
-  $stateProvider.state('error.replies', {
-    url:"/replies",
-    templateUrl: "partials/error.replies.html",
-    controller: "RepliesCtrl"
-  });
-
   $stateProvider.state('archive', {
     url:"/archive",
     templateUrl: "partials/archive.html",
