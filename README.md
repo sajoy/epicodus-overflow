@@ -32,7 +32,7 @@ The archive keeps the record of all errors. Since you can search for errors rela
 1. Add ability to search replies
 2. Add restricted editing of errors, replies
 3. Show how many replies each error has on main page
-4. Refactor controllers/ factories
+4. Refactor controllers/ factories (oneUp function for starters)
 5. MeToo currently only applies to that day. Maybe MeToo could appear on the Archives...if it reaches a high enough number to be of note.
 
 ```

@@ -2,7 +2,7 @@
   <h3 ng-click="showThisM = !showThisM">This Month</h3>
   <div ng-hide="showThisM" class="well scroll">
     <ul>
-      <li ng-repeat="item in filtered = (thisMonth() | orderBy: '-$id' | filter: query )">
+      <li ng-repeat="item in filtered = (thisMonth() | orderBy: 'pureTime': true | filter: query )">
         <p>{{item.time}}:<a ui-sref="error({errorId: item.$id})"> {{item.title}}</a></p>
       </li>
     </ul>
@@ -11,7 +11,7 @@
   <h3 ng-click="showPriorM = !showPriorM">Prior Months</h3>
   <div ng-show="showPriorM" class="well scroll">
     <ul>
-      <li ng-repeat="item in filtered = (priorMonths() | orderBy: '-$id' | filter: query)">
+      <li ng-repeat="item in filtered = (priorMonths() | orderBy: 'pureTime': true | filter: query)">
         <p><a ui-sref="error({errorId: item.$id})">{{item.time}}: {{item.title}}</a></p>
       </li>
     </ul>
@@ -20,7 +20,7 @@
   <h3 ng-click="showPriorY = !showPriorY">Prior Years</h3>
   <div ng-show="showPriorY" class="well scroll">
     <ul>
-      <li ng-repeat="item in filtered = (priorYears() | orderBy: '-$id' | filter: query)">
+      <li ng-repeat="item in filtered = (priorYears() | orderBy: 'pureTime': true | filter: query)">
         <p><a ui-sref="error({errorId: item.$id})">{{item.time}}: {{item.title}}</a></p>
       </li>
     </ul>
