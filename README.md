@@ -21,7 +21,7 @@ Epicodus Overflow was created to give current Epicodus students a place to reach
 1. Add ability to search replies
 2. Add restricted editing of errors, replies
 3. Show how many replies each error has on main page
-4. Add oneUp function to replies
+4. Refactor controllers/ factories
 
 ```
 ### Authors
