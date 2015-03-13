@@ -1,29 +1,28 @@
-<p> ALL </p>
-<h4>This Month:</h4>
-<ul>
-  <li ng-repeat="item in filtered = (thisMonth() | filter: query )">
-    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
-  </li>
-</ul>
+<div class="archive">
+  <h3 ng-click="showThisM = !showThisM">This Month</h3>
+  <div ng-hide="showThisM" class="well scroll">
+    <ul>
+      <li ng-repeat="item in filtered = (thisMonth() | filter: query )">
+        <p>{{item.time}}:<a ui-sref="error.replies({errorId: item.$id})"> {{item.title}}</a></p>
+      </li>
+    </ul>
+  </div>
 
-<h4>Prior Months:</h4>
-<ul>
-  <li ng-repeat="item in filtered = (priorMonths() | filter: query)">
-    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
-  </li>
-</ul>
+  <h3 ng-click="showPriorM = !showPriorM">Prior Months</h3>
+  <div ng-show="showPriorM" class="well scroll">
+    <ul>
+      <li ng-repeat="item in filtered = (priorMonths() | filter: query)">
+        <p><a ui-sref="error.replies({errorId: item.$id})">{{item.time}}: {{item.title}}</a></p>
+      </li>
+    </ul>
+  </div>
 
-<h4>Prior Years:</h4>
-<ul>
-  <li ng-repeat="item in filtered = (priorYears() | filter: query)">
-    <p><a ui-sref="error({errorId: item.$id})">{{item.title}}: {{item.time}}</a></p>
-  </li>
-</ul>
-
-<!-- <p>FILTERED</p>
-
-<ul>
-  <li ng-repeat="entry in ctrl.yearFilter">
-    <p><a ui-sref="error({errorId: item.id})">{{item.title}}</a></p>
-  </li>
-</ul> -->
+  <h3 ng-click="showPriorY = !showPriorY">Prior Years</h3>
+  <div ng-show="showPriorY" class="well scroll">
+    <ul>
+      <li ng-repeat="item in filtered = (priorYears() | filter: query)">
+        <p><a ui-sref="error.replies({errorId: item.$id})">{{item.time}}: {{item.title}}</a></p>
+      </li>
+    </ul>
+  </div>
+</div>
