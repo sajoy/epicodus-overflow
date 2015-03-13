@@ -10,6 +10,15 @@ Have you ever wanted to comment on another person's shortcomings, laughing at th
 
 If any of these sound like you, we build this app with you in mind.
 
+# Known Bugs
+1. OrderBy "-$id" doesn't always seem to order correctly
+
+# Possible Future Features
+1. Add ability to search replies
+2. Add restricted editing of errors, replies
+3. Show how many replies each error has on main page
+4. Add oneUp function to replies
+
 ```
 ### Authors
 
