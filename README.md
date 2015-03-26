@@ -34,13 +34,19 @@ The archive keeps the record of all errors. Since you can search for errors rela
 4. Refactor controllers/ factories (oneUp function for starters)
 5. MeToo currently only applies to that day. Maybe MeToo could appear on the Archives...if it reaches a high enough number to be of note.
 
+# Contribute
+1. Fork this repo
+2. Make changes
+3. Commit
+4. Submit a pull request
+
 ```
 ### Authors
 
 Tyler Brown
 Jackie Fletcher
 Benjamin Herson
-Sarah Joy
+Sarah Joy Calpo
 Grace Mekarski
 Whitney Reans
 
